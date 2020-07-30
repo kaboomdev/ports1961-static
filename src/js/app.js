@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   navEls.mobileMenuTrigger.click(function () {
     navEls.navMobile.toggleClass('show-menu');
   })
-  $(".click-toggle").click(function () {
+  $(".click-toggle").click(function (e) {
+    e.preventDefault();
     const $target = $('.'+this.dataset.targetClass);
     const className = this.dataset.toggleClass;
     

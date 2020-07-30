@@ -1,0 +1,173 @@
+.ports-subscribe-modal
+  border: 4px solid #3D3D3D
+  background-color: #F9F8F6
+  width: 500px
+  padding: 47px
+  overflow-y: auto
+
+  a,
+  a:active,
+  a:visited,
+    text-decoration: underline
+
+  a:hover,
+    text-decoration: none
+
+  .hide-btn
+    cursor: pointer
+    position: absolute
+    top: 12px
+    right: 12px
+    width: 12px
+    height: 12px
+
+  .thank-you
+    pointer-events: none
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    justify-content: center
+    align-items: center
+    font-weight: bold
+    color: #3D3D3D
+    font-size: 12px
+    letter-spacing: 0.6px
+    line-height: 20px
+
+  .page-border
+    display: none
+
+  .page-margin
+    display: none
+    border-color: #F9F8F6
+
+  .subscribe-form
+    width: 100%
+    max-width: 375px
+
+    h3
+      color: #3D3D3D
+      font-size: 12px
+      letter-spacing: 0.6px
+      line-height: 20px
+      margin-bottom: 35px
+
+    h4
+      color: #3D3D3D
+      font-size: 10px
+      line-height: 15px
+      margin-bottom: 30px
+
+    label[for='email']
+      color: #3D3D3D
+      font-size: 10px
+      line-height: 15px
+      text-transform: uppercase
+
+    input[name='email']
+      padding: 10px 0
+      margin: 0
+      box-sizing: border-box
+      background: none
+      border: none
+      width: 100%
+      color: #3D3D3D
+
+    .email-underline
+      width: 100%
+      height: 1px
+      background-color: #3D3D3D
+      margin-bottom: 25px
+
+    .submit-container
+      pointer-events: none
+
+      .submit
+        text-transform: uppercase
+        display: flex
+        color: #9B9B9A
+        font-size: 10px
+        line-height: 13px
+        cursor: pointer
+        pointer-events: none
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        background: none
+        border: none
+        text-decoration: underline
+
+      input[type='submit']
+        margin: 0
+        padding: 0
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        cursor: pointer
+
+    .check-container
+      flex-direction: row
+      margin-bottom: 21px
+
+      .checkbox
+        margin-right: 15px
+        margin-top: 6px
+
+      label
+        color: #3D3D3D
+        font-size: 10px
+        letter-spacing: -0.14px
+        line-height: 16px
+        flex: 1
+
+  &.is-validated
+
+    .subscribe-form
+
+      .submit-container
+        pointer-events: auto
+
+        .submit
+          color: #3D3D3D
+
+  &.is-submitted
+
+    .subscribe-form
+      opacity: 0
+
+    .thank-you
+      opacity: 1
+      pointer-events: auto
+
+
+  @media (max-width: 767px), (max-height: 767px)
+    border: none
+    width: 100%
+    height: 100%
+
+    .hide-btn
+      top: 17px
+      right: 17px
+
+    .page-border
+      display: flex
+
+    .page-margin
+      display: flex
+
+    &.is-submitted
+
+      .subscribe-form
+        display: none
+
+  @media (max-width: 1024px), (max-height: 768px)
+    border-width: 2px
+
+  @media (max-width: 768px), (max-height: 768px)
+    padding: 37px

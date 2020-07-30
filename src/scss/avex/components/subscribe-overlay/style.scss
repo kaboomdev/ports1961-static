@@ -1,0 +1,9 @@
+.ports-subscribe-overlay{
+  visibility: hidden;
+  opacity: 0;
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+  
