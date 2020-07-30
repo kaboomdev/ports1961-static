@@ -1,0 +1,57 @@
+.ports-side-bar
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 3
+  pointer-events: none
+  overflow-x: hidden
+
+  .side-bar-background
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: 0
+    transition: opacity 0.2s
+
+  .side-bar-children
+    padding-left: 40px
+    padding-right: 35px
+    padding-bottom: 30px
+    background: #F9F8F6
+    position: absolute
+    right: 0
+    top: 0
+    min-height: 100%
+    width: 373px
+    transform: translateX(100%)
+    transition: transform 0.2s
+
+    .close-side-bar-btn
+      position: absolute
+      right: 15px
+      top: 18px
+      width: 12px
+      height: 12px
+      cursor: pointer
+
+  &.visible
+    pointer-events: auto
+
+    .side-bar-background
+      opacity: 0.2
+
+    .side-bar-children
+      transform: translateX(0)
+
+  @media (max-width: 768px)
+
+    .side-bar-children
+      width: 100%
+      max-width: 100%
+      padding-left: 30px
+      padding-right: 25px

@@ -1,0 +1,74 @@
+.ports-asset
+  width: 100%
+  height: 100%
+
+  .asset-container
+    width: 100%
+    height: 100%
+
+    .neutral-asset,
+    .hover-asset,
+      width: 100%
+      height: 100%
+
+    .neutral-asset
+      opacity: 1
+      pointer-events: auto
+
+    .hover-asset
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      pointer-events: none
+
+
+  &.animate
+
+    .asset-container
+      opacity: 0
+      transition: opacity 1s
+
+  &:hover
+
+    .asset-container
+
+      .neutral-asset
+        opacity: 0
+        pointer-events: none
+
+      .hover-asset
+        opacity: 1
+        pointer-events: auto
+
+  &.loaded
+
+    .asset-container
+      opacity: 1
+
+  &.force-hover-asset
+
+    .asset-container
+
+      .neutral-asset
+        opacity: 0
+        pointer-events: none
+
+      .hover-asset
+        opacity: 1
+        pointer-events: auto
+
+  &.is-mobile,
+  &.no-hover-asset
+
+    &:hover
+
+      .asset-container
+
+        .neutral-asset
+          opacity: 1
+          pointer-events: auto
+
+        .hover-asset
+          opacity: 0
+          pointer-events: none

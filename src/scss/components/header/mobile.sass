@@ -1,0 +1,162 @@
+
+.ports-mobile-header
+  // position: fixed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  pointer-events: none
+
+  .menu-bar
+    pointer-events: auto
+    flex-direction: row
+    width: 100%
+    align-items: center
+    padding-top: 23px
+    padding-bottom: 23px
+
+    .menu-left
+      width: 33%
+      justify-content: center
+
+      .menu-icon-container
+        cursor: pointer
+
+        .mobile-menu-icon
+          width: 12px
+          height: 12px
+
+    .menu-center
+      width: 33%
+      justify-content: center
+      align-items: center
+      height: 0
+
+      .logo
+        width: 61px
+        height: 31px
+
+    .menu-right
+      width: 33%
+      justify-content: flex-end
+      flex-direction: row
+      transform: translateX(4px)
+
+      .mobile-bag-icon
+        width: 14px
+        height: 14px
+
+  .mobile-menu
+    width: 100%
+    height: 100%
+    pointer-events: auto
+    position: fixed
+    top: 0
+    left: 0
+    background: #F9F8F6
+    overflow-y: auto
+    overflow-x: hidden
+
+    .controls-container
+      width: 100%
+      height: 73px
+      flex-direction: row
+      justify-content: space-between
+      position: absolute
+      top: 0
+      left: 0
+      padding-top: 23px
+      padding-bottom: 23px
+
+      .logo
+        width: 61px
+        height: 31px
+
+      .close-icon-container
+
+        .close-btn
+          cursor: pointer
+          width: 12px
+          height: 12px
+
+    .links-container
+      padding-top: 10px
+      width: 100%
+      flex-direction: row
+      transition: transform 320ms
+      transform: translateX(0)
+      position: absolute
+      padding-top: 98px
+      min-height: 100%
+
+      a,
+      h4
+        color: #3D3D3D
+        font-size: 12px
+        letter-spacing: 0.6px
+        line-height: 18px
+        margin-bottom: 20px
+
+      a
+        cursor: pointer
+        position: relative
+
+      .back-btn
+        font-weight: bold
+
+      .links-level-1
+        width: 100%
+        padding-bottom: 23px
+        font-weight: bold
+
+        a
+          text-transform: uppercase
+
+        .v-shim
+          flex: 1
+
+        .account-btn
+            margin-bottom: 0
+
+      .links-level-2
+        width: 100%
+
+        h4
+          text-transform: uppercase
+          font-weight: bold
+
+        .collections-list
+          padding-left: 22px
+
+        &.shopify-collections
+          a
+            text-transform: uppercase
+
+      .links-level-3
+        width: 100%
+
+        h4
+          text-transform: uppercase
+          font-weight: bold
+
+        .collections-list
+          padding-left: 22px
+
+  &.show-level-2
+    .mobile-menu
+      .links-container
+        transform: translateX(-100%)
+
+  &.show-level-3
+    .mobile-menu
+      .links-container
+        transform: translateX(-200%)
+
+  &:not(.dark)
+    .menu-bar
+      .logo
+        .border
+          background-color: #F9F8F6 !important
+        .logo-circle
+          border-color: #F9F8F6 !important

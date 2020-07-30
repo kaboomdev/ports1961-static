@@ -1,0 +1,74 @@
+.ports-filter-overlay
+  $bottom: 35px
+  overflow-y: auto
+
+  .side-bar-children
+    padding-left: 40px
+    padding-right: 40px
+    max-width: 373px
+
+  h2
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 12px
+    margin-bottom: $bottom
+
+
+  section
+    margin-bottom: $bottom
+
+    h3
+      font-weight: bold
+      font-size: 10px
+      margin-bottom: 20px
+
+    .values
+      width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+
+      .value
+        width: 33%
+        margin-bottom: 15px
+        font-size: 10px
+        align-items: center
+        flex-direction: row
+        padding-right: 5px
+        cursor: pointer
+
+        .checkbox,
+        .radio
+          margin-right: 5px
+          margin-top: 1px
+
+        label
+          cursor: pointer
+
+  section.sort-by
+    width: 75%
+    margin-bottom: 70px
+
+    .values
+      .value
+        width: 50%
+
+  section.buttons
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+
+    .apply-btn,
+    .reset-btn
+      display: inline-flex
+      cursor: pointer
+      font-size: 10px
+      padding: 8px 30px
+
+    .apply-btn
+      text-transform: uppercase
+      color: #F9F8F6
+      background-color: #3D3D3D
+      font-weight: bold
+
+    .reset-btn
+      text-decoration: underline

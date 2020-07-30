@@ -1,0 +1,126 @@
+$side-padding: 14%;
+
+.ports-desktop-header {
+  padding: 23px $side-padding;
+  transition: background-color 0.35s;
+  transition-delay: 0.5s;
+  
+  &:hover {
+    .ports-asset .asset-container {
+      .neutral-asset {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .hover-asset {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+  &.dark {
+    .ports-asset .asset-container {
+      .neutral-asset {
+        display: none;
+      }
+      .hover-asset {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+  
+  .nav-level-2 {
+    top: 100%;
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+    &__content {
+      width: 100%;
+      flex-direction: row;
+    }
+    .collection {
+      padding-bottom: 8px;
+      
+      .title {
+        &:hover {
+          & + .links {
+            opacity: 1;
+            max-height: 150px;
+          }
+        }
+        & + .links:hover {
+          opacity: 1;
+          max-height: 150px;
+        }
+      }
+      .links {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.2s ease, max-height 0.5s ease-out;
+        .link { 
+          min-width: 70px;
+        }
+        .link:last-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+  }
+  
+  &.show-level-2 {
+    .nav-level-2 {
+      max-height: 150px;
+    }
+  }
+
+  .search-subnav {
+    top: 100%;
+    padding: 0 $side-padding;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+    .ports-search-input {
+      max-width: 60%;
+      position: relative;
+      margin: 100px auto;
+    }
+  }
+  
+  &.show-search {
+    .search-subnav {
+      max-height: 300px;
+    }
+  }
+}
+.ports-mobile-header {
+  display: none;
+  .menu-bar {
+    padding: 23px 30px;
+  }
+  .controls-container {
+    padding: 0 30px;
+  }
+  .mobile-menu {
+    transform: translateX(-100%);
+    transition: 300ms ease;
+    padding: 0 30px;
+  }
+  &.show-menu {
+    .mobile-menu {
+      transform: translateX(0%);
+    }
+  }
+}
+
+@include lg {
+  .ports-desktop-header {
+    display: none;
+  }
+  .ports-mobile-header {
+    display: flex;
+  }
+}

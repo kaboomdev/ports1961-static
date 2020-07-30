@@ -1,0 +1,93 @@
+
+.primary-variant-grid-item
+  opacity: 0
+  transition: opacity 1s
+  cursor: pointer
+
+  .asset
+    background-color: #F0EFEC
+
+  .container
+    .asset
+      .css-image
+        background-size: cover
+
+  .details
+    height: 100px
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+    padding-top: 10px
+    font-size: 10px
+    overflow: hidden
+    line-height: 130%
+    vertical-align: top
+    opacity: 0
+    text-transform: capitalize
+
+    .copy
+      flex: 1
+
+      .title
+        font-weight: bold
+        padding-right: 5px
+        text-transform: capitalize
+        line-height: 13px
+        width: 85%
+
+    .inventory
+      align-items: flex-end
+
+      .price
+
+      .compare-at-price
+        display: none
+
+      .out-copy
+        text-transform: none
+
+
+  &.visible
+    opacity: 1
+
+  &:hover
+    .details
+      opacity: 1
+
+  @media(max-width: 768px)
+    .details
+      opacity: 1
+      flex-direction: column
+      justify-content: flex-start
+
+      .copy
+        flex: inherit
+
+        .title
+          padding-right: 0
+          padding-bottom: 5px
+
+      .inventory
+        align-items: flex-start
+
+  &.out-of-stock
+    .details
+      .inventory
+        .price
+          text-decoration: line-through
+          color: #a8a8a8
+
+  &.discounted
+    .details
+      .inventory
+        .compare-at-price
+          display: block
+          text-decoration: line-through
+          color: #a8a8a8
+
+  &.supporting,
+  &.supporting .neutral-asset
+    pointer-events: none !important
+
+    .details
+      opacity: 0

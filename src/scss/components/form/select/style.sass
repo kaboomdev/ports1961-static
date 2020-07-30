@@ -1,0 +1,51 @@
+.ports-select
+  width: 100%
+
+  *
+    color: #3D3D3D
+    font-size: 10px
+    text-transform: uppercase
+
+  label
+    margin-bottom: 5px
+
+  .selection
+    width: 100%
+    flex-direction: row
+    align-items: center
+
+    select
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      opacity: 0
+
+    .text
+      flex: 1
+      font-weight: 700
+
+    .arrow
+      width: 9px
+      height: 5px
+
+  .error-message
+    color: #E02020
+
+  &.look-2
+
+    .selection
+      border-bottom: 1px solid #3D3D3D
+
+      .text
+        font-size: 10px
+        font-weight: unset
+        line-height: unset
+
+  &.should-show-error
+
+    &.look-2
+
+      .selection
+        border-color: #E02020

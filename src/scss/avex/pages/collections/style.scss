@@ -1,0 +1,51 @@
+.ports-page.ports-plp {
+  padding: $top-padding-desktop $side-padding-desktop;
+}
+
+.module-default {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 550px;
+  gap: 32px;
+  margin-bottom: 50px;
+}
+
+.primary-variant-grid-item {
+  display: flex;
+  flex-direction: column;
+  .container {
+    flex-grow: 1;
+  }
+  .details {
+    height: auto;
+  }
+  &--lg {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+  }
+}
+
+.ports-side-bar {
+  .side-bar-children {
+    padding-top: $top-padding-desktop;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ports-page.ports-plp {
+    padding: $top-padding-mobile $side-padding-mobile;
+  }
+  .module-default {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 16px 8px;    
+  }
+  
+  .ports-side-bar {
+    .side-bar-children {
+      padding-top: $top-padding-mobile;
+    }
+  }
+  
+  
+}
