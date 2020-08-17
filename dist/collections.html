@@ -13,6 +13,7 @@
 	<!-- External CSS -->
 
 	<!-- Internal CSS -->
+	<link rel="stylesheet" href="/css/critical.min.css">
 	<link rel="stylesheet" href="/css/style.min.css">
 	<!-- Fonts Here -->
 
@@ -421,7 +422,16 @@
 					<h3>By Color</h3>
 					<div class="values">
 						<div class="value">
-							<div class="ports-checkbox checkbox" style="width: 6px; height: 6px;"></div><label>Black</label>
+							<div class="check-container">
+								<input type="checkbox" name="color-black" id="color-black" hidden>
+								<div class="ports-checkbox checkbox"></div>
+								<div role="label">
+									Black
+								</div>
+								<label for="color-black">
+									Black
+								</label>
+							</div>
 						</div>
 						<div class="value">
 							<div class="ports-checkbox checkbox" style="width: 6px; height: 6px;"></div><label>Black And Blue</label>
@@ -577,21 +587,33 @@
 				<h3>Sign up to hear about the latest news and collections.</h3><label for="email">Email*</label><input
 					type="email" name="email" value="">
 				<div class="email-underline"></div>
+				
 				<div class="check-container">
-					<div class="ports-checkbox checkbox"></div><label for="has-consented-to-promotions">I consent to promotional
-						activities (catalogue mailshots, invitations to events, information about new collections, direct sale,
-						market research) via automated and traditional methods of communication.</label>
+					<input type="checkbox" name="has-consented-to-promotions" id="has-consented-to-promotions" hidden>
+					<div class="ports-checkbox checkbox"></div>
+					<div role="label">
+						I consent to promotional activities (catalogue mailshots, invitations to events, information about new collections, direct sale,
+						market research) via automated and traditional methods of communication.
+					</div>
+					<label for="has-consented-to-promotions">
+						I consent to promotional activities (catalogue mailshots, invitations to events, information about new collections, direct sale,
+						market research) via automated and traditional methods of communication.
+					</label>
 				</div>
 				<div class="check-container">
-					<div class="ports-checkbox checkbox"></div><label>I consent to profiling activities and customer relationship
-						management in order to obtain services and offers based on my personal preferences.</label>
+					<input type="checkbox" name="has-consented-to-profiling" id="has-consented-to-profiling" hidden>
+					<div class="ports-checkbox checkbox"></div>
+					<div role="label">
+						I consent to profiling activities and customer relationship management in order to obtain services and offers based on my personal preferences.
+					</div>
+					<label for="has-consented-to-profiling"></label>
 				</div>
 				<h4>By clicking submit, you agree to our <a target="_blank" class="ports-link"
 						href="/legal/terms-and-conditions">terms &amp; conditions</a> and <a target="_blank" class="ports-link"
 						href="/legal/privacy-policy">privacy policy</a> and <a target="_blank" class="ports-link"
 						href="/legal/privacy-policy">cookies policy.</a></h4>
 				<div class="submit-container">
-					<div class="submit">Submit</div><input type="submit">
+					<input type="submit" class="submit" value="Submit">
 				</div>
 			</form>
 			<div class="thank-you">Thank you for your subscription.</div>

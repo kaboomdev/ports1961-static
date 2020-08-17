@@ -98,6 +98,7 @@ $side-padding: 14%;
 }
 .ports-mobile-header {
   display: none;
+  
   .menu-bar {
     padding: 23px 30px;
   }
@@ -108,6 +109,9 @@ $side-padding: 14%;
     transform: translateX(-100%);
     transition: 300ms ease;
     padding: 0 30px;
+  }
+  .subscribe-btn {
+    margin-top: auto;
   }
   &.show-menu {
     .mobile-menu {

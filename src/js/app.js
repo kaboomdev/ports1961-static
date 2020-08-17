@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', function(){
   //Nav 
   const navEls = {
     navDesktop: $('.ports-desktop-header'),
@@ -36,9 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     $target.toggleClass(className);
   })
-
-
-
-
-
 });

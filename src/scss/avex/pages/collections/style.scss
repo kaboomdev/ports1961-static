@@ -31,9 +31,20 @@
   }
 }
 
+.module-loading {
+  text-align: center;
+  font-size: 12px;
+}
+
+.ports-filter-overlay {
+  .check-container {
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .ports-page.ports-plp {
-    padding: $top-padding-mobile $side-padding-mobile;
+    padding: $top-padding-mobile $side-padding-mobile $top-padding-mobile+20px;
   }
   .module-default {
     grid-template-columns: 1fr 1fr;

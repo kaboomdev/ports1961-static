@@ -1,9 +1,25 @@
-.ports-subscribe-overlay{
+.ports-subscribe-overlay {
   visibility: hidden;
   opacity: 0;
+
   &.visible {
     visibility: visible;
     opacity: 1;
   }
 }
-  
+
+.ports-subscribe-modal {
+  .subscribe-form {
+    .check-container {
+
+      label,
+      div[role="label"] {
+        color: #3D3D3D;
+        font-size: 10px;
+        letter-spacing: -0.14px;
+        line-height: 16px;
+        flex: 1;
+      }
+    }
+  }
+}
